@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
 </head>
 <body>
-    
+    <header>
+        <div class=" bg-orange-100">
+            <div class="navbar w-[80%] mx-auto">
+                <div class="navbar-start ">
+                  <div class="">                      
+                    <button id="home-button" class="bg-green-300 text-black px-6 py-2 text-xl rounded-lg font-bold">Home</button>
+                  </div>                    
+                </div>
+                <div class="navbar-center hidden gap-x-4 lg:flex">
+                 <img src="assets/logo.png" alt="">
+                 <h2 class="text-2xl font-semibold">Donate Bangladesh</h2>
+                </div>
+                <div class="navbar-end space-x-2">
+                  <img src="assets/coin.png" alt="">
+                  <h1 class="text-3xl font-semibold">5500 BDT</h1>
+                </div>
+              </div>
+        </div>
+    </header>
+    <main class="mt-10 w-[80%] mx-auto">
+        <h1 class="text-4xl font-bold mb-2">Important FAQ</h1>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document object Model(DOM)?</div>
+            <div class="collapse-content">
+              <p class="font-medium">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select and element frome the DOM?</div>
+            <div class="collapse-content">
+              <p class="font-medium">The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">WHat is event delegation in the context of the DOM,and WHy is it useful?</div>
+            <div class="collapse-content">
+              <p class="font-medium">Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manypulat's an element's attributes and style using the DOM?</div>
+            <div class="collapse-content">
+              <p class="font-medium ">Changing an element's style CSS attributes the DOM can be used,The code below, the onfocus event handler method is used to change the element's style when the user clicks inside it. When this event occurs, the element's background color will change to purple.</p>
+            </div>
+          </div>
+    </main>
+
+
+    <script>
+        let homePage = document.getElementById("home-button");
+        homePage.addEventListener("click", function () {
+          window.location.href = "./index.html";
+        });
+      </script>
 </body>
 </html>
