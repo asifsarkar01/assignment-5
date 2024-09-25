@@ -1,11 +1,13 @@
 console.log('conected.....');
+// Navbar sticky 
+
 const navbar = document.getElementById("navbar-section");
 const sticky = navbar.offsetTop;
 function navbarSticky(){
   if (window.scrollY > sticky) {
-    navbar.classList.add("fixed","w-[100%]","z-30");
+    navbar.classList.add("fixed","w-[100%]","z-40");
   }else{
-    navbar.classList.remove("fixed","w-[100%]","z-30");
+    navbar.classList.remove("fixed","w-[100%]","z-40");
   }
 }
 window.addEventListener("scroll", navbarSticky);
@@ -33,6 +35,12 @@ document.getElementById('donate-amount')
     document.getElementById('balance-stat-nav').innerText=minusBalance;
     alert('succesfully added balance')
 
+
+    const p= document.createElement('p');
+    p.innerText =`${balanceAdd} :Taka is Donate for Flood at Noakhali Bangladesh`
+    console.log(p);
+   document.getElementById('Transaction-history').appendChild(p);
+
 }else{
     alert('failed to add..!')
 }
@@ -58,6 +66,14 @@ document.getElementById('donate-now')
     let minusBalance =balanceNav-balanceAdded;
     document.getElementById('balance-stat-nav').innerText=minusBalance;
     alert('succesfully added balance')
+
+
+    // Notification amount 
+    
+    const p= document.createElement('p');
+    p.innerText =`${balanceAdded} :Taka is Donate for Flood at FENI Bangladesh`
+    console.log(p);
+   document.getElementById('Transaction-history-2').appendChild(p);
 
  }else{
     alert('failed to add..!')
@@ -85,31 +101,20 @@ document.getElementById('donate-quata')
     document.getElementById('balance-stat-nav').innerText=minusBalance;
     alert('succesfully added balance')
 
+
+    // Notification amount 
+    
+    const p= document.createElement('p');
+    p.innerText =`${balanceAddQuata} :Taka is Donate for Flood at QUATA Movement Bangladesh`
+    console.log(p);
+   document.getElementById('Transaction-history-3').appendChild(p);
+
  }else{
     alert('failed to add..!')
 }
 })
 
 // Show Button Donation History
-
-
-    //   transitionHistory.innerHTML += `
-    //   <div class=" border  border-orange-100 p-3 rounded-2xl shadow-lg mb-2">
-    //     <p class=" font-bold py-1">${donationAmount} ${titleDonation}</p>
-    //     <p>${time}</p>
-    //     <p>${formateDateTime}</p>
-    //   </div>
-    //   `;
-  
-
-
-
-
-
-
-
-
-
 
 
 
